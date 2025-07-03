@@ -1,0 +1,20 @@
+<html>
+    <body>
+        <input  type="text" id="gmail" placeholder="Enter gmail">
+        <p id="message"></p>
+        <script>
+            let gmail=document.getElementById("gmail");
+            gmail.addEventListener("input",function(){
+                let str=gmail.value.toUpperCase();
+                const gmailregex=/^[a-z][@][a-z][.][a-z]$/;
+                if(gmailregex.test(str)){
+                    document.getElementById("message").innerHTML="valid gmail";
+                    document.getElementById("message").style="color:green";
+                }else{
+                     document.getElementById("message").innerHTML="Invalid gmail";
+                     document.getElementById("message").style="color:red";
+                }
+            })
+            </script>
+    </body>
+</html>
